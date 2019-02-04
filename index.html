@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Corben|IM+Fell+DW+Pica|IM+Fell+Double+Pica+SC|Goudy+Bookletter+1911" rel="stylesheet">
+    <style>
+      /* Fonts:
+       *
+       * Corben
+       * IM Fell DW Pica
+       * IM Fell Double Pica SC
+       *
+       */
+      h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-family: "IM Fell DW Pica";
+      }
+      h2 {
+        margin: 0;
+        font-family: "IM Fell DW Pica";
+      }
+      hr {
+        border: none;
+        background: #dac4a2;
+        height: 1px;
+      }
+      header hr, footer hr {
+        background-color: #333;
+        border-radius: 1px;
+        height: 0.66rem;
+      }
+      section {
+        padding: 0 15px;
+      }
+      p {
+        max-width: 550px;
+        margin: 20px 0;
+        font-family: "Goudy Bookletter 1911";
+      }
+      .products {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .products .header {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      .product {
+        padding: 0 25%;
+        width: 100%;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .product img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transition: all ease 1s;
+      }
+      .product img:active {
+        width: 200%;
+        max-height: 500px;
+      }
+      .product h2 {
+        margin: 20px 0 0 0;
+        width: 100%;
+        text-align: center;
+      }
+      body {
+        color: #333;
+        margin: 0;
+        padding: 50px 10%;
+        font-size: 16px;
+        background-color: #ebd5b3;
+      }
+      @media all and (max-width: 800px) {
+        body {
+          padding: 40px 5%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hickory Armory</h1>
+      <hr>
+    </header>
+    <section>
+      <p>There's really only one thing we know how to do at the Hickory
+        Armory, and that's work wood. Please send help in March for tax
+        season &dash; we'll need it! At least we didn't keep our records
+        engraved in bark this year.
+      </p>
+    </section>
+    <hr>
+    <section>
+      <div class="products">
+        <div class="products header">
+          <h2>Swords</h2>
+        </div>
+        <div class="product impact">
+          <img src="./images/end-tables.jpg"
+            style="object-position: 50% 25%"
+            draggable="false">
+          <h2>Impact</h2>
+          <p>A wooden sword designed to take a beating. Go ahead &dash; bash
+            away. It's perhaps the perfect impact-proof weapon. You can't
+            break it, or your money back.
+          </p>
+        </div>
+        <div class="product child-sized">
+          <img src="./images/shaving-wood.jpeg"
+            style="object-position: 75% 60%"
+            draggable="false">
+          <h2>Child-Sized</h2>
+          <p>It's irresponsible to give a child a live blade &dash; take
+            this instead! Guaranteed to provide hours of entertainment
+            away from the TV. Perfect size for hunting squirrels.
+          </p>
+        </div>
+        <div class="product feather">
+          <img src="./images/table.jpeg"
+            style="object-position: 50% 20%;"
+            draggable="false">
+          <h2>Feather</h2>
+          <p>You'll hear it before you see it. This blade is the lightest
+            wooden weapon you'll ever wield, and it definitely packs a
+            wallop! Keep a wide safety buffer during practice.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <hr>
+    </footer>
+  </body>
+</html>
