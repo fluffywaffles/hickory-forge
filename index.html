@@ -1,6 +1,7 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Corben|IM+Fell+DW+Pica|IM+Fell+Double+Pica+SC|Goudy+Bookletter+1911" rel="stylesheet">
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
     <style>
       /* Fonts:
        *
@@ -23,7 +24,15 @@
         background: #dac4a2;
         height: 1px;
       }
-      header hr, footer hr {
+      header {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+      }
+      footer {
+        height: 50vh;
+      }
+      header hr {
         background-color: #333;
         border-radius: 1px;
         height: 0.66rem;
@@ -47,6 +56,7 @@
         margin-bottom: 20px;
       }
       .product {
+        margin-bottom: 1rem;
         padding: 0 25%;
         width: 100%;
         display: flex;
@@ -56,10 +66,13 @@
       }
       .product img {
         width: 100%;
-        max-height: 200px;
+        max-height: 300px;
         object-fit: cover;
         object-position: 50% 50%;
         transition: all ease 1s;
+      }
+      .product img:hover {
+        cursor: zoom-in;
       }
       .product img:active {
         width: 200%;
@@ -71,9 +84,10 @@
         text-align: center;
       }
       body {
+        overflow-y: scroll;
         color: #333;
         margin: 0;
-        padding: 50px 10%;
+        padding: 3vh 10%;
         font-size: 16px;
         background-color: #ebd5b3;
       }
@@ -86,25 +100,19 @@
   </head>
   <body>
     <header>
-      <h1>Hickory Armory</h1>
+      <h1>Hickory Forge</h1>
       <hr>
     </header>
-    <section>
-      <p>There's really only one thing we know how to do at the Hickory
-        Armory, and that's work wood. Please send help in March for tax
-        season &dash; we'll need it! At least we didn't keep our records
-        engraved in bark this year.
-      </p>
-    </section>
-    <hr>
     <section>
       <div class="products">
         <div class="products header">
           <h2>Swords</h2>
         </div>
         <div class="product impact">
-          <img src="./images/end-tables.jpg"
-            style="object-position: 50% 25%"
+          <img
+            src="./images/swords/impact/hickory/Impact, hickory 1.jpg"
+            title="tap or click and hold down to zoom in"
+            style="object-position: 50% 25%;"
             draggable="false">
           <h2>Impact</h2>
           <p>A wooden sword designed to take a beating. Go ahead &dash; bash
@@ -113,8 +121,10 @@
           </p>
         </div>
         <div class="product child-sized">
-          <img src="./images/shaving-wood.jpeg"
-            style="object-position: 75% 60%"
+          <img
+            src="./images/swords/child-size/2-sw-ne.jpg"
+            title="tap or click and hold down to zoom in"
+            style="object-position: 75% 60%;"
             draggable="false">
           <h2>Child-Sized</h2>
           <p>It's irresponsible to give a child a live blade &dash; take
@@ -122,11 +132,12 @@
             away from the TV. Perfect size for hunting squirrels.
           </p>
         </div>
-        <div class="product feather">
-          <img src="./images/table.jpeg"
+        <div class="product ultralight">
+          <img src="./images/swords/ultralight/hickory/Ultralight, hickory 1.jpg"
+            title="tap or click and hold down to zoom in"
             style="object-position: 50% 20%;"
             draggable="false">
-          <h2>Feather</h2>
+          <h2>Ultralight</h2>
           <p>You'll hear it before you see it. This blade is the lightest
             wooden weapon you'll ever wield, and it definitely packs a
             wallop! Keep a wide safety buffer during practice.
@@ -135,7 +146,13 @@
       </div>
     </section>
     <footer>
-      <hr>
     </footer>
+  <script>
+    window.addEventListener('contextmenu', function (evt) {
+      evt.stopPropagation()
+      evt.preventDefault()
+      return false
+    })
+  </script>
   </body>
 </html>
